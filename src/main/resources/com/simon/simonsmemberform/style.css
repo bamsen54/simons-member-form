@@ -1,0 +1,23 @@
+
+#root {
+    -fx-background-color: #404142;
+}
+
+.descriptions {
+
+    -fx-font-size: 28px;
+    -fx-text-fill: white;
+}
+
+.input-field {
+
+    -fx-text-fill: black;
+    -fx-font-size: 28px;
+}
+
+#save {
+
+    -fx-font-size: 32px;
+}
+
+
