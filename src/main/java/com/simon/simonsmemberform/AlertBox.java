@@ -2,7 +2,6 @@ package com.simon.simonsmemberform;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -18,6 +17,7 @@ public class AlertBox {
 
         VBox root = new VBox(10);
         root.setStyle( "-fx-background-color: #404142;" );
+        root.setSpacing( 20 );
 
         for( String message : messages ) {
             final Label label = new Label( message );

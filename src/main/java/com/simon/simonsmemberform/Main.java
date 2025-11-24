@@ -52,14 +52,14 @@ public class Main extends Application {
         Button saveMemberButton = new Button( "Spara medlem" );
         saveMemberButton.setId( "save" );
 
-        root.add( firstNameLabel, 0, 0 );
-        root.add( firstNameField, 1, 0 );
-        root.add( lastNameLabel, 0, 1 );
-        root.add( lastNameField, 1, 1 );
+        root.add( firstNameLabel,   0, 0 );
+        root.add( firstNameField,   1, 0 );
+        root.add( lastNameLabel,    0, 1 );
+        root.add( lastNameField,    1, 1 );
         root.add( phoneNumberLabel, 0, 2 );
         root.add( phoneNumberField, 1, 2 );
-        root.add( addressLabel, 0, 3 );
-        root.add( addressField, 1, 3 );
+        root.add( addressLabel,     0, 3 );
+        root.add( addressField,     1, 3 );
         root.add( saveMemberButton, 0, 4 );
 
         Scene primaryScene = new Scene( root, 800,600 );
@@ -71,13 +71,20 @@ public class Main extends Application {
 
         saveMemberButton.setOnAction( e -> {
 
-            final String firstName   = firstNameField.getText();
-            final String lastName    = lastNameField.getText();
-            final String phoneNumber = phoneNumberField.getText();
-            final String address     = addressField.getText();
+            boolean allFieldsNotEmpty = firstNameField.getText().isEmpty() || lastNameField.getText().isEmpty() ||
+                                      phoneNumberField.getText().isEmpty() || addressField.getText().isEmpty();
+
+            if( allFieldsNotEmpty ) {
+                AlertBox.show( "fyll i alla textfält", "Alla textfält måste vara iflyllda" );
+                return;
+            }
+
+            final String firstName   = "namn\n"     + firstNameField.getText();
+            final String lastName    = "efternamn\n" +lastNameField.getText();
+            final String phoneNumber = "telefonnummer\n" + phoneNumberField.getText();
+            final String address     = "adress\n" + addressField.getText();
 
             AlertBox.show( "sparad medlem", firstName, lastName, phoneNumber, address );
-
         } );
     }
 }
