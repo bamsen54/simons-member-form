@@ -29,10 +29,10 @@ public class Main extends Application {
         Label phoneNumberLabel  = new Label( "Telefonnummer " );
         Label addressLabel      = new Label( "Adress " );
 
-        firstNameLabel.getStyleClass().add( "descriptions" );
-        lastNameLabel.getStyleClass().add( "descriptions" );
-        phoneNumberLabel.getStyleClass().add( "descriptions" );
-        addressLabel.getStyleClass().add( "descriptions" );
+        firstNameLabel.getStyleClass().add( "input-label" );
+        lastNameLabel.getStyleClass().add( "input-label" );
+        phoneNumberLabel.getStyleClass().add( "input-label" );
+        addressLabel.getStyleClass().add( "input-label" );
 
         TextField firstNameField = new TextField( );
         TextField lastNameField = new TextField();
