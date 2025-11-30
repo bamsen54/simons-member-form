@@ -1,3 +1,5 @@
+// Simon Toivola SY25 Objektorienterad Programmering fördjupning Uppgift 1 - medlemsformulär
+
 package com.simon.simonsmemberform;
 
 import javafx.application.Application;
@@ -88,3 +90,4 @@ public class Main extends Application {
         } );
     }
 }
+
