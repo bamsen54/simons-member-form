@@ -71,18 +71,18 @@ public class Main extends Application {
 
         saveMemberButton.setOnAction( e -> {
 
-            boolean allFieldsNotEmpty = firstNameField.getText().isEmpty() || lastNameField.getText().isEmpty() ||
-                                      phoneNumberField.getText().isEmpty() || addressField.getText().isEmpty();
+            boolean isAnyFieldEmpty = firstNameField.getText().isEmpty() || lastNameField.getText().isEmpty() ||
+                                    phoneNumberField.getText().isEmpty() || addressField.getText().isEmpty();
 
-            if( allFieldsNotEmpty ) {
-                AlertBox.show( "fyll i alla textfält", "Alla textfält måste vara iflyllda" );
+            if( isAnyFieldEmpty ) {
+                AlertBox.show( "fyll i alla textfält", "Alla textfält måste vara ifyllda" );
                 return;
             }
 
-            final String firstName   = "namn\n"     + firstNameField.getText();
-            final String lastName    = "efternamn\n" +lastNameField.getText();
-            final String phoneNumber = "telefonnummer\n" + phoneNumberField.getText();
-            final String address     = "adress\n" + addressField.getText();
+            final String firstName   = "Förnamn:\n"     + firstNameField.getText();
+            final String lastName    = "Efternamn:\n" +lastNameField.getText();
+            final String phoneNumber = "Telefonnummer:\n" + phoneNumberField.getText();
+            final String address     = "Adress:\n" + addressField.getText();
 
             AlertBox.show( "sparad medlem", firstName, lastName, phoneNumber, address );
         } );
