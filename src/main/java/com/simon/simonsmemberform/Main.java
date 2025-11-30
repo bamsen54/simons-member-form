@@ -18,36 +18,36 @@ public class Main extends Application {
 
         GridPane root = new GridPane();
         root.setId( "root" );
-        root.setPadding( new Insets( 10, 0, 0, 25 ));
+        root.setPadding( new Insets( 10, 0, 0, 25 ) );
 
         root.setHgap( gridGap );
         root.setVgap( gridGap );
-        root.getStylesheets().add( getClass().getResource("style.css").toExternalForm() );
+        root.getStylesheets().add( getClass().getResource( "style.css").toExternalForm() );
 
         Label firstNameLabel    = new Label( "Förnamn" );
         Label lastNameLabel     = new Label( "Efternamn" );
         Label phoneNumberLabel  = new Label( "Telefonnummer " );
         Label addressLabel      = new Label( "Adress " );
 
-        firstNameLabel.getStyleClass().add( "input-label" );
-        lastNameLabel.getStyleClass().add( "input-label" );
+        firstNameLabel.getStyleClass().add(   "input-label" );
+        lastNameLabel.getStyleClass().add(    "input-label" );
         phoneNumberLabel.getStyleClass().add( "input-label" );
-        addressLabel.getStyleClass().add( "input-label" );
+        addressLabel.getStyleClass().add(     "input-label" );
 
-        TextField firstNameField = new TextField( );
-        TextField lastNameField = new TextField();
+        TextField firstNameField   = new TextField( );
+        TextField lastNameField    = new TextField();
         TextField phoneNumberField = new TextField();
-        TextField addressField = new TextField();
+        TextField addressField     = new TextField();
 
-        firstNameField.setPrefWidth( 450 );
-        lastNameField.setPrefWidth( 450 );
+        firstNameField.setPrefWidth(   450 );
+        lastNameField.setPrefWidth(    450 );
         phoneNumberField.setPrefWidth( 450 );
-        addressField.setPrefWidth( 450 );
+        addressField.setPrefWidth(     450 );
 
-        firstNameField.getStyleClass().add( "input-field" );
-        lastNameField.getStyleClass().add( "input-field" );
+        firstNameField.getStyleClass().add(   "input-field" );
+        lastNameField.getStyleClass().add(    "input-field" );
         phoneNumberField.getStyleClass().add( "input-field" );
-        addressField.getStyleClass().add( "input-field" );
+        addressField.getStyleClass().add(     "input-field" );
 
         Button saveMemberButton = new Button( "Spara medlem" );
         saveMemberButton.setId( "save" );

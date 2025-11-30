@@ -15,7 +15,7 @@ public class AlertBox {
         stage.setResizable( false );
         stage.initModality( Modality.APPLICATION_MODAL );
 
-        VBox root = new VBox(10);
+        VBox root = new VBox( 10 );
         root.setStyle( "-fx-background-color: #404142;" );
         root.setSpacing( 20 );
 
